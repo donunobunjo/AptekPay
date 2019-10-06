@@ -35,13 +35,20 @@
             this.newStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentsPerPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enrollmentsPerPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perPeriodToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.perProgramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +57,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setupToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -93,6 +101,20 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // toolStrip1
             // 
@@ -148,19 +170,56 @@
             this.toolStripButton4.Text = "Student\'s Payments";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // helpToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "&Help";
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paymentsPerPeriodToolStripMenuItem,
+            this.enrollmentsPerPeriodToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(54, 20);
+            this.toolStripMenuItem2.Text = "&Report";
             // 
-            // aboutToolStripMenuItem
+            // paymentsPerPeriodToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.paymentsPerPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perPeriodToolStripMenuItem,
+            this.perProgramToolStripMenuItem});
+            this.paymentsPerPeriodToolStripMenuItem.Name = "paymentsPerPeriodToolStripMenuItem";
+            this.paymentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paymentsPerPeriodToolStripMenuItem.Text = "Payments";
+            // 
+            // enrollmentsPerPeriodToolStripMenuItem
+            // 
+            this.enrollmentsPerPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perPeriodToolStripMenuItem1,
+            this.perProgramToolStripMenuItem1});
+            this.enrollmentsPerPeriodToolStripMenuItem.Name = "enrollmentsPerPeriodToolStripMenuItem";
+            this.enrollmentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.enrollmentsPerPeriodToolStripMenuItem.Text = "Enrollments";
+            // 
+            // perPeriodToolStripMenuItem
+            // 
+            this.perPeriodToolStripMenuItem.Name = "perPeriodToolStripMenuItem";
+            this.perPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perPeriodToolStripMenuItem.Text = "Per Period";
+            // 
+            // perProgramToolStripMenuItem
+            // 
+            this.perProgramToolStripMenuItem.Name = "perProgramToolStripMenuItem";
+            this.perProgramToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perProgramToolStripMenuItem.Text = "Per Program";
+            // 
+            // perPeriodToolStripMenuItem1
+            // 
+            this.perPeriodToolStripMenuItem1.Name = "perPeriodToolStripMenuItem1";
+            this.perPeriodToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.perPeriodToolStripMenuItem1.Text = "Per Period";
+            // 
+            // perProgramToolStripMenuItem1
+            // 
+            this.perProgramToolStripMenuItem1.Name = "perProgramToolStripMenuItem1";
+            this.perProgramToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.perProgramToolStripMenuItem1.Text = "Per Program";
             // 
             // MDI
             // 
@@ -199,6 +258,13 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem paymentsPerPeriodToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perPeriodToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perProgramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enrollmentsPerPeriodToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perPeriodToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem perProgramToolStripMenuItem1;
 
     }
 }

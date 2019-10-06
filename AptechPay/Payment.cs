@@ -25,7 +25,18 @@ namespace AptechPay
            // this.paymentsTableAdapter.Fill(this.data.Payments);
             //label1.Text = studid;
             label4.Text = fulname;
-
+            int stdID = Convert.ToInt32(studid);
+            this.paymentsHistoryTableAdapter.Fill(this.data.PaymentsHistory, stdID);
+            DataTable paydt = new DataTable();
+            DataTable billdt = new DataTable();
+            //dttable = this.programsTableAdapter.GetDataByProgram(comboBox1.Text);
+            paydt = this.sumPaymentTableAdapter.GetData(stdID);
+            billdt = this.sumBillTableAdapter.GetData(stdID);
+            decimal billTotal = Convert.ToDecimal(billdt.Rows[0][0].ToString());
+            decimal payTotal = Convert.ToDecimal(paydt.Rows[0][0].ToString());
+            decimal bal = billTotal - payTotal;
+            //MessageBox.Show(bal.ToString());
+            label6.Text = bal.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)

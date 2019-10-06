@@ -22,3 +22,4 @@ C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Properties
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.csproj.GenerateResource.Cache
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Search.resources
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Payment.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.PaymentHistory.resources

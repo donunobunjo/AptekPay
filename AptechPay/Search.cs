@@ -31,28 +31,10 @@ namespace AptechPay
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*if (dataGridView1.SelectedRows.Count == 1)
+           if (dataGridView1.SelectedRows.Count == 1)
             {
-                DialogResult res = MessageBox.Show("Are you sure you want to delete this record", "Confirmation", MessageBoxButtons.YesNo);
-                if (res == DialogResult.Yes)
-                {
-                    dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
-                }
-                else
-                {
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("You need to select a row, by clicking the row marker, before you hit the delete button");
-            }*/
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                //dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
                 string iden = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
                 string fulname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                //MessageBox.Show(fulname);
                 Payment payment = new Payment();
                 payment.studid = iden;
                 payment.fulname = fulname;
@@ -62,6 +44,27 @@ namespace AptechPay
             {
                 MessageBox.Show("No row selected");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                string iden = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+                string fulname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                string program = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                PaymentHistory payHist = new PaymentHistory();
+                payHist.studid = iden;
+                payHist.fulname = fulname;
+                payHist.program = program;
+                payHist.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("No row selected");
+            }
+
         }
     }
 }
