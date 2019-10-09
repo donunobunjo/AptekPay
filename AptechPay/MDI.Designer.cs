@@ -35,6 +35,13 @@
             this.newStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentsPerPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enrollmentsPerPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perPeriodToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.perProgramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -42,13 +49,6 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.paymentsPerPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enrollmentsPerPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perPeriodToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.perProgramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,58 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paymentsPerPeriodToolStripMenuItem,
+            this.enrollmentsPerPeriodToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(54, 20);
+            this.toolStripMenuItem2.Text = "&Report";
+            // 
+            // paymentsPerPeriodToolStripMenuItem
+            // 
+            this.paymentsPerPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perPeriodToolStripMenuItem,
+            this.perProgramToolStripMenuItem});
+            this.paymentsPerPeriodToolStripMenuItem.Name = "paymentsPerPeriodToolStripMenuItem";
+            this.paymentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paymentsPerPeriodToolStripMenuItem.Text = "Payments";
+            // 
+            // perPeriodToolStripMenuItem
+            // 
+            this.perPeriodToolStripMenuItem.Name = "perPeriodToolStripMenuItem";
+            this.perPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perPeriodToolStripMenuItem.Text = "Per Period";
+            this.perPeriodToolStripMenuItem.Click += new System.EventHandler(this.perPeriodToolStripMenuItem_Click);
+            // 
+            // perProgramToolStripMenuItem
+            // 
+            this.perProgramToolStripMenuItem.Name = "perProgramToolStripMenuItem";
+            this.perProgramToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perProgramToolStripMenuItem.Text = "Per Program";
+            // 
+            // enrollmentsPerPeriodToolStripMenuItem
+            // 
+            this.enrollmentsPerPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perPeriodToolStripMenuItem1,
+            this.perProgramToolStripMenuItem1});
+            this.enrollmentsPerPeriodToolStripMenuItem.Name = "enrollmentsPerPeriodToolStripMenuItem";
+            this.enrollmentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.enrollmentsPerPeriodToolStripMenuItem.Text = "Enrollments";
+            // 
+            // perPeriodToolStripMenuItem1
+            // 
+            this.perPeriodToolStripMenuItem1.Name = "perPeriodToolStripMenuItem1";
+            this.perPeriodToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.perPeriodToolStripMenuItem1.Text = "Per Period";
+            // 
+            // perProgramToolStripMenuItem1
+            // 
+            this.perProgramToolStripMenuItem1.Name = "perProgramToolStripMenuItem1";
+            this.perProgramToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.perProgramToolStripMenuItem1.Text = "Per Program";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -113,7 +165,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // toolStrip1
@@ -169,57 +221,6 @@
             this.toolStripButton4.Size = new System.Drawing.Size(44, 44);
             this.toolStripButton4.Text = "Student\'s Payments";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.paymentsPerPeriodToolStripMenuItem,
-            this.enrollmentsPerPeriodToolStripMenuItem});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(54, 20);
-            this.toolStripMenuItem2.Text = "&Report";
-            // 
-            // paymentsPerPeriodToolStripMenuItem
-            // 
-            this.paymentsPerPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.perPeriodToolStripMenuItem,
-            this.perProgramToolStripMenuItem});
-            this.paymentsPerPeriodToolStripMenuItem.Name = "paymentsPerPeriodToolStripMenuItem";
-            this.paymentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.paymentsPerPeriodToolStripMenuItem.Text = "Payments";
-            // 
-            // enrollmentsPerPeriodToolStripMenuItem
-            // 
-            this.enrollmentsPerPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.perPeriodToolStripMenuItem1,
-            this.perProgramToolStripMenuItem1});
-            this.enrollmentsPerPeriodToolStripMenuItem.Name = "enrollmentsPerPeriodToolStripMenuItem";
-            this.enrollmentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.enrollmentsPerPeriodToolStripMenuItem.Text = "Enrollments";
-            // 
-            // perPeriodToolStripMenuItem
-            // 
-            this.perPeriodToolStripMenuItem.Name = "perPeriodToolStripMenuItem";
-            this.perPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.perPeriodToolStripMenuItem.Text = "Per Period";
-            // 
-            // perProgramToolStripMenuItem
-            // 
-            this.perProgramToolStripMenuItem.Name = "perProgramToolStripMenuItem";
-            this.perProgramToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.perProgramToolStripMenuItem.Text = "Per Program";
-            // 
-            // perPeriodToolStripMenuItem1
-            // 
-            this.perPeriodToolStripMenuItem1.Name = "perPeriodToolStripMenuItem1";
-            this.perPeriodToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.perPeriodToolStripMenuItem1.Text = "Per Period";
-            // 
-            // perProgramToolStripMenuItem1
-            // 
-            this.perProgramToolStripMenuItem1.Name = "perProgramToolStripMenuItem1";
-            this.perProgramToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.perProgramToolStripMenuItem1.Text = "Per Program";
             // 
             // MDI
             // 

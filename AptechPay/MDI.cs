@@ -77,5 +77,12 @@ namespace AptechPay
         {
             System.Diagnostics.Process.Start("calc.exe");
         }
+
+        private void perPeriodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            paymentsPerPeriod ppp = new paymentsPerPeriod();
+            ppp.MdiParent = this;
+            ppp.Show();
+        }
     }
 }

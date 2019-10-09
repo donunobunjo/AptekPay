@@ -23,3 +23,10 @@ C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.csproj.Gen
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Search.resources
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Payment.resources
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.PaymentHistory.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.paymentsPerPeriod.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\bin\Debug\AptechPay.exe.manifest
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\bin\Debug\AptechPay.application
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.TrustInfo.xml
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.exe.manifest
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.application
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Login.resources

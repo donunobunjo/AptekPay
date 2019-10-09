@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace AptechPay
 {
@@ -30,8 +31,9 @@ namespace AptechPay
             // TODO: This line of code loads data into the 'data.ProgramNames' table. You can move, or remove it, as needed.
             this.programNamesTableAdapter.Fill(this.data.ProgramNames);
             this.CenterToScreen();
-            this.Top = 50;
+            this.Top = 10;
             comboBox1.SelectedIndex = -1;
+            textBox12.Focus();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,16 +51,26 @@ namespace AptechPay
             textBox6.Text = "";
             textBox7.Text = "";
             textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
             comboBox1.SelectedIndex = -1;
-            textBox1.Focus();
+            textBox12.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string rollnum, middlename;
+            string rollnum, middlename, email,alternativePhoneNumber;
            // int duration;
             //double cost;
             DateTime enddate;
+            if (textBox12.Text == "")
+            {
+                MessageBox.Show("Please enter IdentificationID ");
+                textBox12.Focus();
+                return;
+            }
             if (textBox2.Text == "")
             {
                 MessageBox.Show("Please enter student name");
@@ -95,6 +107,12 @@ namespace AptechPay
                 textBox7.Focus();
                 return;
             }
+             if (textBox9.Text == "")
+            {
+                MessageBox.Show("Please enter student phone number");
+                textBox9.Focus();
+                return;
+            }
 
             if (textBox3.Text == "")
             {
@@ -110,10 +128,37 @@ namespace AptechPay
             else{
                 rollnum=textBox1.Text;
             }
+            if (textBox10.Text == "")
+            {
+                alternativePhoneNumber = "Nill";
+            }
+            else
+            {
+                alternativePhoneNumber = textBox1.Text;
+            }
+            if (textBox11.Text == "")
+            {
+                email = "Nill";
+            }
+            else
+            {
+                email = textBox11.Text;
+                Regex expr = new Regex(@"^[a-zA-Z][\w\.-]{2,28}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
+                if (expr.IsMatch(email))
+                {
+                    email = textBox11.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid email");
+                    textBox11.Focus();
+                    return;
+                }
+            }
             string fullname = textBox2.Text + " " + textBox3.Text + " " + textBox4.Text;
             enddate= dateTimePicker1.Value.Date.AddMonths(Convert.ToInt32(textBox5.Text));
             // this.studentsTableAdapter.InsertQuery(rollnum, textBox2.Text, textBox3.Text, textBox4.Text, fullname, comboBox1.Text, Convert.ToInt32(textBox5.Text), Convert.ToDecimal(textBox6.Text), dateTimePicker1.Value, enddate, textBox8.Text, true);
-            this.studentsTableAdapter.InsertQuery(rollnum, textBox2.Text, textBox3.Text, textBox4.Text, fullname, comboBox1.Text, Convert.ToInt32(textBox5.Text), Convert.ToDecimal(textBox6.Text), dateTimePicker1.Value.ToString(), enddate.ToString(), textBox8.Text, true);
+            this.studentsTableAdapter.InsertQuery(rollnum, textBox2.Text, textBox3.Text, textBox4.Text, fullname, comboBox1.Text, Convert.ToInt32(textBox5.Text), Convert.ToDecimal(textBox6.Text), dateTimePicker1.Value.ToString(), enddate.ToString(), textBox8.Text, true,Convert.ToInt32(textBox12.Text),textBox9.Text,alternativePhoneNumber,email);
             DataTable dtable = new DataTable();
             dtable=this.studIDTableAdapter.GetData();
             Int32 stdid = Convert.ToInt32(dtable.Rows[0][0].ToString());
@@ -128,8 +173,12 @@ namespace AptechPay
             textBox6.Text = "";
             textBox7.Text = "";
             textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
             comboBox1.SelectedIndex = -1;
-            textBox1.Focus();
+            textBox12.Focus();
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
@@ -181,6 +230,21 @@ namespace AptechPay
        private void textBox6_TextChanged(object sender, EventArgs e)
        {
 
+       }
+
+       private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+       {
+           e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+       }
+
+       private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+       {
+           e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+       }
+
+       private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+       {
+           e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
        }
 
        
