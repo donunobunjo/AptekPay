@@ -30,3 +30,4 @@ C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.TrustInfo.
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.exe.manifest
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.application
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Login.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.ChangePassword.resources

@@ -117,20 +117,20 @@
             this.perPeriodToolStripMenuItem,
             this.perProgramToolStripMenuItem});
             this.paymentsPerPeriodToolStripMenuItem.Name = "paymentsPerPeriodToolStripMenuItem";
-            this.paymentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paymentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.paymentsPerPeriodToolStripMenuItem.Text = "Payments";
             // 
             // perPeriodToolStripMenuItem
             // 
             this.perPeriodToolStripMenuItem.Name = "perPeriodToolStripMenuItem";
-            this.perPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perPeriodToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.perPeriodToolStripMenuItem.Text = "Per Period";
             this.perPeriodToolStripMenuItem.Click += new System.EventHandler(this.perPeriodToolStripMenuItem_Click);
             // 
             // perProgramToolStripMenuItem
             // 
             this.perProgramToolStripMenuItem.Name = "perProgramToolStripMenuItem";
-            this.perProgramToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perProgramToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.perProgramToolStripMenuItem.Text = "Per Program";
             // 
             // enrollmentsPerPeriodToolStripMenuItem
@@ -139,7 +139,7 @@
             this.perPeriodToolStripMenuItem1,
             this.perProgramToolStripMenuItem1});
             this.enrollmentsPerPeriodToolStripMenuItem.Name = "enrollmentsPerPeriodToolStripMenuItem";
-            this.enrollmentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.enrollmentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.enrollmentsPerPeriodToolStripMenuItem.Text = "Enrollments";
             // 
             // perPeriodToolStripMenuItem1
@@ -159,14 +159,15 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "&Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.helpToolStripMenuItem.Text = "&Security";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.aboutToolStripMenuItem.Text = "Change Password";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -235,6 +236,7 @@
             this.IsMdiContainer = true;
             this.Name = "MDI";
             this.Text = "Aptech Abeokuta Center";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MDI_FormClosed);
             this.Load += new System.EventHandler(this.MDI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -21,12 +21,20 @@ namespace AptechPay
         {
             this.CenterToScreen();
             this.Top = 10;
+            this.searchTableAdapter.FillBy(this.data.Search);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             //this.studentInfoTableAdapter.FillBy1(this.reportManDataSet.StudentInfo, textBox1.Text, textBox1.Text, textBox1.Text);
-            this.searchTableAdapter.Fill(this.data.Search, textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text);
+            if (textBox1.Text == "")
+            {
+                this.searchTableAdapter.FillBy(this.data.Search);
+            }
+            else
+            {
+                this.searchTableAdapter.Fill(this.data.Search, textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

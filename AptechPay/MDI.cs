@@ -13,6 +13,7 @@ namespace AptechPay
     public partial class MDI : Form
     {
         //private int childFormNumber = 0;
+        public string userName;
 
         public MDI()
         {
@@ -83,6 +84,19 @@ namespace AptechPay
             paymentsPerPeriod ppp = new paymentsPerPeriod();
             ppp.MdiParent = this;
             ppp.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword changepwd = new ChangePassword();
+            changepwd.userName = userName.Trim();
+            changepwd.MdiParent = this;
+            changepwd.Show();
+        }
+
+        private void MDI_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

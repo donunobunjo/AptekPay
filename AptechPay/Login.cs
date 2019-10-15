@@ -26,12 +26,33 @@ namespace AptechPay
         {
             textBox1.Text = "";
             textBox2.Text = "";
+            textBox1.Focus();
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'data.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.data.Users);
             this.CenterToScreen();
            // this.Top = 10;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = this.usersTableAdapter.GetDataBy(textBox1.Text.Trim(), textBox2.Text.Trim());
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Invalid username or password");
+                return;
+            }
+            else {
+                string userName = textBox1.Text.Trim();
+                MDI mdi = new MDI();
+                mdi.userName = userName;
+                mdi.Show();
+                this.Hide();
+            }
         }
     }
 }

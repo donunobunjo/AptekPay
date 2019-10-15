@@ -72,6 +72,14 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.checkIdenIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.checkIdenIDTableAdapter = new AptechPay.DataTableAdapters.CheckIdenIDTableAdapter();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.checkpaymentIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.checkpaymentIDTableAdapter = new AptechPay.DataTableAdapters.checkpaymentIDTableAdapter();
+            this.checkstudentIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.checkstudentIDTableAdapter = new AptechPay.DataTableAdapters.checkstudentIDTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.programNamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -79,6 +87,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkIdenIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkpaymentIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkstudentIDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -184,7 +195,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(126, 286);
+            this.label10.Location = new System.Drawing.Point(133, 325);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 17);
@@ -303,7 +314,7 @@
             // 
             this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(189, 286);
+            this.textBox8.Location = new System.Drawing.Point(183, 325);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
@@ -476,15 +487,66 @@
             this.textBox12.Location = new System.Drawing.Point(183, 15);
             this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(181, 23);
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(82, 23);
             this.textBox12.TabIndex = 10;
             this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
+            // 
+            // checkIdenIDBindingSource
+            // 
+            this.checkIdenIDBindingSource.DataMember = "CheckIdenID";
+            this.checkIdenIDBindingSource.DataSource = this.data;
+            // 
+            // checkIdenIDTableAdapter
+            // 
+            this.checkIdenIDTableAdapter.ClearBeforeFill = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(27, 276);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(154, 17);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Type Of Enrollment*";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "NON PORTAL",
+            "PORTAL"});
+            this.comboBox2.Location = new System.Drawing.Point(189, 276);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 40;
+            // 
+            // checkpaymentIDBindingSource
+            // 
+            this.checkpaymentIDBindingSource.DataMember = "checkpaymentID";
+            this.checkpaymentIDBindingSource.DataSource = this.data;
+            // 
+            // checkpaymentIDTableAdapter
+            // 
+            this.checkpaymentIDTableAdapter.ClearBeforeFill = true;
+            // 
+            // checkstudentIDBindingSource
+            // 
+            this.checkstudentIDBindingSource.DataMember = "checkstudentID";
+            this.checkstudentIDBindingSource.DataSource = this.data;
+            // 
+            // checkstudentIDTableAdapter
+            // 
+            this.checkstudentIDTableAdapter.ClearBeforeFill = true;
             // 
             // NewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 507);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textBox11);
@@ -526,6 +588,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkIdenIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkpaymentIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkstudentIDBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -576,5 +641,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.BindingSource checkIdenIDBindingSource;
+        private DataTableAdapters.CheckIdenIDTableAdapter checkIdenIDTableAdapter;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.BindingSource checkpaymentIDBindingSource;
+        private DataTableAdapters.checkpaymentIDTableAdapter checkpaymentIDTableAdapter;
+        private System.Windows.Forms.BindingSource checkstudentIDBindingSource;
+        private DataTableAdapters.checkstudentIDTableAdapter checkstudentIDTableAdapter;
     }
 }

@@ -13,6 +13,7 @@ namespace AptechPay
 {
     public partial class NewStudent : Form
     {
+        public string userName;
         public NewStudent()
         {
             InitializeComponent();
@@ -20,20 +21,27 @@ namespace AptechPay
 
         private void NewStudent_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'data.StudID' table. You can move, or remove it, as needed.
-            //this.studIDTableAdapter.Fill(this.data.StudID);
-            // TODO: This line of code loads data into the 'data.Payments' table. You can move, or remove it, as needed.
-            //this.paymentsTableAdapter.Fill(this.data.Payments);
-            // TODO: This line of code loads data into the 'data.Students' table. You can move, or remove it, as needed.
-            //this.studentsTableAdapter.Fill(this.data.Students);
-            // TODO: This line of code loads data into the 'data.Programs' table. You can move, or remove it, as needed.
-            //this.programsTableAdapter.Fill(this.data.Programs);
-            // TODO: This line of code loads data into the 'data.ProgramNames' table. You can move, or remove it, as needed.
+            Int32 ctr;
+            DataTable dt = new DataTable();
+            DataTable stddt = new DataTable();
+            stddt = this.studentsTableAdapter.GetData();
+            if (stddt.Rows.Count == 0)
+            {
+                ctr = 1;
+            }
+            else
+            {
+                dt = this.checkstudentIDTableAdapter.GetData();
+                ctr = Convert.ToInt32(dt.Rows[0][0].ToString());
+                ctr = ctr + 1;
+            }
+            textBox12.Text = ctr.ToString();
             this.programNamesTableAdapter.Fill(this.data.ProgramNames);
             this.CenterToScreen();
             this.Top = 10;
             comboBox1.SelectedIndex = -1;
-            textBox12.Focus();
+            comboBox2.SelectedIndex = -1;
+            textBox1.Focus();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -56,7 +64,8 @@ namespace AptechPay
             textBox11.Text = "";
             textBox12.Text = "";
             comboBox1.SelectedIndex = -1;
-            textBox12.Focus();
+            comboBox2.SelectedIndex = -1;
+            textBox1.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,15 +74,24 @@ namespace AptechPay
            // int duration;
             //double cost;
             DateTime enddate;
-            if (textBox12.Text == "")
+            /*if (textBox12.Text == "")
             {
                 MessageBox.Show("Please enter IdentificationID ");
+                textBox12.Focus();
+                return;
+            }*/
+            Int32 iden = Convert.ToInt32(textBox12.Text);
+            DataTable dt = new DataTable();
+            dt = this.checkIdenIDTableAdapter.GetData(iden);
+            if (dt.Rows.Count!=0)
+            {
+                MessageBox.Show("This Identification ID has been used");
                 textBox12.Focus();
                 return;
             }
             if (textBox2.Text == "")
             {
-                MessageBox.Show("Please enter student name");
+                MessageBox.Show("Please enter student first name");
                 textBox2.Focus();
                 return;
             }
@@ -113,6 +131,12 @@ namespace AptechPay
                 textBox9.Focus();
                 return;
             }
+             if (comboBox2.Text == "")
+             {
+                 MessageBox.Show("Please select an enrollment type");
+                 comboBox2.Focus();
+                 return;
+             }
 
             if (textBox3.Text == "")
             {
@@ -178,7 +202,13 @@ namespace AptechPay
             textBox11.Text = "";
             textBox12.Text = "";
             comboBox1.SelectedIndex = -1;
-            textBox12.Focus();
+            comboBox2.SelectedIndex = -1;
+            DataTable dtCheckStudID = new DataTable();
+            dtCheckStudID = this.checkstudentIDTableAdapter.GetData();
+            Int32 ctr = Convert.ToInt32(dt.Rows[0][0].ToString());
+            ctr = ctr + 1;
+            textBox12.Text = ctr.ToString();
+            textBox1.Focus();
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
