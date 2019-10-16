@@ -44,6 +44,7 @@ namespace AptechPay
         private void newStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewStudent student = new NewStudent();
+            student.userName = userName;
             student.MdiParent = this;
             student.Show();
         }
@@ -56,6 +57,7 @@ namespace AptechPay
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             NewStudent student = new NewStudent();
+            student.userName = userName;
             student.MdiParent = this;
             student.Show();
         }
@@ -70,6 +72,7 @@ namespace AptechPay
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             Search search = new Search();
+            search.username = userName;
             search.MdiParent = this;
             search.Show();
         }

@@ -783,6 +783,12 @@ namespace AptechPay {
             
             private global::System.Data.DataColumn columnNote;
             
+            private global::System.Data.DataColumn columnUserName;
+            
+            private global::System.Data.DataColumn columnDOT;
+            
+            private global::System.Data.DataColumn columnEnrollmentType;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PaymentsDataTable() {
@@ -874,6 +880,30 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UserNameColumn {
+                get {
+                    return this.columnUserName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DOTColumn {
+                get {
+                    return this.columnDOT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EnrollmentTypeColumn {
+                get {
+                    return this.columnEnrollmentType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -909,7 +939,7 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PaymentsRow AddPaymentsRow(int StudID, string FullName, decimal Bill, decimal Payment, System.DateTime TDate, string Note) {
+            public PaymentsRow AddPaymentsRow(int StudID, string FullName, decimal Bill, decimal Payment, System.DateTime TDate, string Note, string UserName, System.DateTime DOT, string EnrollmentType) {
                 PaymentsRow rowPaymentsRow = ((PaymentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -918,7 +948,10 @@ namespace AptechPay {
                         Bill,
                         Payment,
                         TDate,
-                        Note};
+                        Note,
+                        UserName,
+                        DOT,
+                        EnrollmentType};
                 rowPaymentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPaymentsRow);
                 return rowPaymentsRow;
@@ -955,6 +988,9 @@ namespace AptechPay {
                 this.columnPayment = base.Columns["Payment"];
                 this.columnTDate = base.Columns["TDate"];
                 this.columnNote = base.Columns["Note"];
+                this.columnUserName = base.Columns["UserName"];
+                this.columnDOT = base.Columns["DOT"];
+                this.columnEnrollmentType = base.Columns["EnrollmentType"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -974,6 +1010,12 @@ namespace AptechPay {
                 base.Columns.Add(this.columnTDate);
                 this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote);
+                this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserName);
+                this.columnDOT = new global::System.Data.DataColumn("DOT", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOT);
+                this.columnEnrollmentType = new global::System.Data.DataColumn("EnrollmentType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnrollmentType);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPaymentID}, true));
                 this.columnPaymentID.AutoIncrement = true;
@@ -984,6 +1026,8 @@ namespace AptechPay {
                 this.columnPaymentID.Unique = true;
                 this.columnFullName.MaxLength = 75;
                 this.columnNote.MaxLength = 2147483647;
+                this.columnUserName.MaxLength = 50;
+                this.columnEnrollmentType.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1456,6 +1500,12 @@ namespace AptechPay {
             
             private global::System.Data.DataColumn columnEmail;
             
+            private global::System.Data.DataColumn columnUserName;
+            
+            private global::System.Data.DataColumn columnDOT;
+            
+            private global::System.Data.DataColumn columnEnrollmentType;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public StudentsDataTable() {
@@ -1627,6 +1677,30 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UserNameColumn {
+                get {
+                    return this.columnUserName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DOTColumn {
+                get {
+                    return this.columnDOT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EnrollmentTypeColumn {
+                get {
+                    return this.columnEnrollmentType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1678,7 +1752,10 @@ namespace AptechPay {
                         int IdenID, 
                         string Phone1, 
                         string Phone2, 
-                        string Email) {
+                        string Email, 
+                        string UserName, 
+                        System.DateTime DOT, 
+                        string EnrollmentType) {
                 StudentsRow rowStudentsRow = ((StudentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1697,7 +1774,10 @@ namespace AptechPay {
                         IdenID,
                         Phone1,
                         Phone2,
-                        Email};
+                        Email,
+                        UserName,
+                        DOT,
+                        EnrollmentType};
                 rowStudentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentsRow);
                 return rowStudentsRow;
@@ -1744,6 +1824,9 @@ namespace AptechPay {
                 this.columnPhone1 = base.Columns["Phone1"];
                 this.columnPhone2 = base.Columns["Phone2"];
                 this.columnEmail = base.Columns["Email"];
+                this.columnUserName = base.Columns["UserName"];
+                this.columnDOT = base.Columns["DOT"];
+                this.columnEnrollmentType = base.Columns["EnrollmentType"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1783,6 +1866,12 @@ namespace AptechPay {
                 base.Columns.Add(this.columnPhone2);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
+                this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserName);
+                this.columnDOT = new global::System.Data.DataColumn("DOT", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOT);
+                this.columnEnrollmentType = new global::System.Data.DataColumn("EnrollmentType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnrollmentType);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStudID}, true));
                 this.columnStudID.AutoIncrement = true;
@@ -1801,6 +1890,8 @@ namespace AptechPay {
                 this.columnPhone1.MaxLength = 15;
                 this.columnPhone2.MaxLength = 15;
                 this.columnEmail.MaxLength = 30;
+                this.columnUserName.MaxLength = 50;
+                this.columnEnrollmentType.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2198,6 +2289,8 @@ namespace AptechPay {
             
             private global::System.Data.DataColumn columnStudID;
             
+            private global::System.Data.DataColumn columnEnrollmentType;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SearchDataTable() {
@@ -2297,6 +2390,14 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EnrollmentTypeColumn {
+                get {
+                    return this.columnEnrollmentType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2332,7 +2433,7 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SearchRow AddSearchRow(string RollNumber, string FullName, string ProgramName, int Duration, System.DateTime StartDate, System.DateTime EndDate, string Note) {
+            public SearchRow AddSearchRow(string RollNumber, string FullName, string ProgramName, int Duration, System.DateTime StartDate, System.DateTime EndDate, string Note, string EnrollmentType) {
                 SearchRow rowSearchRow = ((SearchRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RollNumber,
@@ -2342,7 +2443,8 @@ namespace AptechPay {
                         StartDate,
                         EndDate,
                         Note,
-                        null};
+                        null,
+                        EnrollmentType};
                 rowSearchRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSearchRow);
                 return rowSearchRow;
@@ -2380,6 +2482,7 @@ namespace AptechPay {
                 this.columnEndDate = base.Columns["EndDate"];
                 this.columnNote = base.Columns["Note"];
                 this.columnStudID = base.Columns["StudID"];
+                this.columnEnrollmentType = base.Columns["EnrollmentType"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2401,6 +2504,8 @@ namespace AptechPay {
                 base.Columns.Add(this.columnNote);
                 this.columnStudID = new global::System.Data.DataColumn("StudID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStudID);
+                this.columnEnrollmentType = new global::System.Data.DataColumn("EnrollmentType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnrollmentType);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStudID}, true));
                 this.columnRollNumber.MaxLength = 25;
@@ -2413,6 +2518,7 @@ namespace AptechPay {
                 this.columnStudID.AllowDBNull = false;
                 this.columnStudID.ReadOnly = true;
                 this.columnStudID.Unique = true;
+                this.columnEnrollmentType.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5324,6 +5430,54 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string UserName {
+                get {
+                    try {
+                        return ((string)(this[this.tablePayments.UserNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserName\' in table \'Payments\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePayments.UserNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime DOT {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablePayments.DOTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DOT\' in table \'Payments\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePayments.DOTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EnrollmentType {
+                get {
+                    try {
+                        return ((string)(this[this.tablePayments.EnrollmentTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EnrollmentType\' in table \'Payments\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePayments.EnrollmentTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsStudIDNull() {
                 return this.IsNull(this.tablePayments.StudIDColumn);
             }
@@ -5392,6 +5546,42 @@ namespace AptechPay {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNoteNull() {
                 this[this.tablePayments.NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUserNameNull() {
+                return this.IsNull(this.tablePayments.UserNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUserNameNull() {
+                this[this.tablePayments.UserNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDOTNull() {
+                return this.IsNull(this.tablePayments.DOTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDOTNull() {
+                this[this.tablePayments.DOTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEnrollmentTypeNull() {
+                return this.IsNull(this.tablePayments.EnrollmentTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEnrollmentTypeNull() {
+                this[this.tablePayments.EnrollmentTypeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5788,6 +5978,54 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string UserName {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudents.UserNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserName\' in table \'Students\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudents.UserNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime DOT {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableStudents.DOTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DOT\' in table \'Students\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudents.DOTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EnrollmentType {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudents.EnrollmentTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EnrollmentType\' in table \'Students\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudents.EnrollmentTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRollNumberNull() {
                 return this.IsNull(this.tableStudents.RollNumberColumn);
             }
@@ -5977,6 +6215,42 @@ namespace AptechPay {
             public void SetEmailNull() {
                 this[this.tableStudents.EmailColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUserNameNull() {
+                return this.IsNull(this.tableStudents.UserNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUserNameNull() {
+                this[this.tableStudents.UserNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDOTNull() {
+                return this.IsNull(this.tableStudents.DOTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDOTNull() {
+                this[this.tableStudents.DOTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEnrollmentTypeNull() {
+                return this.IsNull(this.tableStudents.EnrollmentTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEnrollmentTypeNull() {
+                this[this.tableStudents.EnrollmentTypeColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -6161,6 +6435,22 @@ namespace AptechPay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EnrollmentType {
+                get {
+                    try {
+                        return ((string)(this[this.tableSearch.EnrollmentTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EnrollmentType\' in table \'Search\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSearch.EnrollmentTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRollNumberNull() {
                 return this.IsNull(this.tableSearch.RollNumberColumn);
             }
@@ -6241,6 +6531,18 @@ namespace AptechPay {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNoteNull() {
                 this[this.tableSearch.NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEnrollmentTypeNull() {
+                return this.IsNull(this.tableSearch.EnrollmentTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEnrollmentTypeNull() {
+                this[this.tableSearch.EnrollmentTypeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7500,10 +7802,13 @@ namespace AptechPay.DataTableAdapters {
             tableMapping.ColumnMappings.Add("Payment", "Payment");
             tableMapping.ColumnMappings.Add("TDate", "TDate");
             tableMapping.ColumnMappings.Add("Note", "Note");
+            tableMapping.ColumnMappings.Add("UserName", "UserName");
+            tableMapping.ColumnMappings.Add("DOT", "DOT");
+            tableMapping.ColumnMappings.Add("EnrollmentType", "EnrollmentType");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Payments] WHERE (([PaymentID] = @Original_PaymentID) AND ((@IsNull_StudID = 1 AND [StudID] IS NULL) OR ([StudID] = @Original_StudID)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Bill = 1 AND [Bill] IS NULL) OR ([Bill] = @Original_Bill)) AND ((@IsNull_Payment = 1 AND [Payment] IS NULL) OR ([Payment] = @Original_Payment)) AND ((@IsNull_TDate = 1 AND [TDate] IS NULL) OR ([TDate] = @Original_TDate)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Payments] WHERE (([PaymentID] = @Original_PaymentID) AND ((@IsNull_StudID = 1 AND [StudID] IS NULL) OR ([StudID] = @Original_StudID)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Bill = 1 AND [Bill] IS NULL) OR ([Bill] = @Original_Bill)) AND ((@IsNull_Payment = 1 AND [Payment] IS NULL) OR ([Payment] = @Original_Payment)) AND ((@IsNull_TDate = 1 AND [TDate] IS NULL) OR ([TDate] = @Original_TDate)) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_DOT = 1 AND [DOT] IS NULL) OR ([DOT] = @Original_DOT)) AND ((@IsNull_EnrollmentType = 1 AND [EnrollmentType] IS NULL) OR ([EnrollmentType] = @Original_EnrollmentType)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -7516,10 +7821,16 @@ namespace AptechPay.DataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Payment", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Payment", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollmentType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Payments] ([StudID], [FullName], [Bill], [Payment], [TDate], [Note]) VALUES (@StudID, @FullName, @Bill, @Payment, @TDate, @Note);
-SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHERE (PaymentID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Payments] ([StudID], [FullName], [Bill], [Payment], [TDate], [Note], [UserName], [DOT], [EnrollmentType]) VALUES (@StudID, @FullName, @Bill, @Payment, @TDate, @Note, @UserName, @DOT, @EnrollmentType);
+SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note, UserName, DOT, EnrollmentType FROM Payments WHERE (PaymentID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7527,10 +7838,13 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Payment", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Payment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Payments] SET [StudID] = @StudID, [FullName] = @FullName, [Bill] = @Bill, [Payment] = @Payment, [TDate] = @TDate, [Note] = @Note WHERE (([PaymentID] = @Original_PaymentID) AND ((@IsNull_StudID = 1 AND [StudID] IS NULL) OR ([StudID] = @Original_StudID)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Bill = 1 AND [Bill] IS NULL) OR ([Bill] = @Original_Bill)) AND ((@IsNull_Payment = 1 AND [Payment] IS NULL) OR ([Payment] = @Original_Payment)) AND ((@IsNull_TDate = 1 AND [TDate] IS NULL) OR ([TDate] = @Original_TDate)));
-SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHERE (PaymentID = @PaymentID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Payments] SET [StudID] = @StudID, [FullName] = @FullName, [Bill] = @Bill, [Payment] = @Payment, [TDate] = @TDate, [Note] = @Note, [UserName] = @UserName, [DOT] = @DOT, [EnrollmentType] = @EnrollmentType WHERE (([PaymentID] = @Original_PaymentID) AND ((@IsNull_StudID = 1 AND [StudID] IS NULL) OR ([StudID] = @Original_StudID)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Bill = 1 AND [Bill] IS NULL) OR ([Bill] = @Original_Bill)) AND ((@IsNull_Payment = 1 AND [Payment] IS NULL) OR ([Payment] = @Original_Payment)) AND ((@IsNull_TDate = 1 AND [TDate] IS NULL) OR ([TDate] = @Original_TDate)) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_DOT = 1 AND [DOT] IS NULL) OR ([DOT] = @Original_DOT)) AND ((@IsNull_EnrollmentType = 1 AND [EnrollmentType] IS NULL) OR ([EnrollmentType] = @Original_EnrollmentType)));
+SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note, UserName, DOT, EnrollmentType FROM Payments WHERE (PaymentID = @PaymentID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7538,6 +7852,9 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Payment", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Payment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7549,6 +7866,12 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Payment", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Payment", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollmentType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7565,12 +7888,14 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM dbo.Payments";
+            this._commandCollection[0].CommandText = "SELECT        PaymentID, StudID, FullName, Bill, Payment, TDate, Note, UserName, " +
+                "DOT, EnrollmentType\r\nFROM            Payments";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[Payments] ([StudID], [FullName], [Bill], [Payment], [TDate], [" +
-                "Note]) VALUES (@StudID, @FullName, @Bill, @Payment, @TDate, @Note);\r\n";
+            this._commandCollection[1].CommandText = "INSERT INTO Payments\r\n                         (StudID, FullName, Bill, Payment, " +
+                "TDate, Note, UserName, DOT, EnrollmentType)\r\nVALUES        (@StudID,@FullName,@B" +
+                "ill,@Payment,@TDate,@Note,@user,@dot,@enrollmenttype);  \r\n";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.VarChar, 75, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7578,6 +7903,9 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Payment", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "Payment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "TDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.Text, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dot", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@enrollmenttype", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7637,7 +7965,7 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_PaymentID, global::System.Nullable<int> Original_StudID, string Original_FullName, global::System.Nullable<decimal> Original_Bill, global::System.Nullable<decimal> Original_Payment, global::System.Nullable<global::System.DateTime> Original_TDate) {
+        public virtual int Delete(int Original_PaymentID, global::System.Nullable<int> Original_StudID, string Original_FullName, global::System.Nullable<decimal> Original_Bill, global::System.Nullable<decimal> Original_Payment, global::System.Nullable<global::System.DateTime> Original_TDate, string Original_UserName, global::System.Nullable<global::System.DateTime> Original_DOT, string Original_EnrollmentType) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PaymentID));
             if ((Original_StudID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -7679,6 +8007,30 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
+            if ((Original_UserName == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_UserName));
+            }
+            if ((Original_DOT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((System.DateTime)(Original_DOT.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_EnrollmentType == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_EnrollmentType));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7699,7 +8051,7 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> StudID, string FullName, global::System.Nullable<decimal> Bill, global::System.Nullable<decimal> Payment, global::System.Nullable<global::System.DateTime> TDate, string Note) {
+        public virtual int Insert(global::System.Nullable<int> StudID, string FullName, global::System.Nullable<decimal> Bill, global::System.Nullable<decimal> Payment, global::System.Nullable<global::System.DateTime> TDate, string Note, string UserName, global::System.Nullable<global::System.DateTime> DOT, string EnrollmentType) {
             if ((StudID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(StudID.Value));
             }
@@ -7736,6 +8088,24 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Note));
             }
+            if ((UserName == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(UserName));
+            }
+            if ((DOT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(DOT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((EnrollmentType == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(EnrollmentType));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7756,7 +8126,26 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> StudID, string FullName, global::System.Nullable<decimal> Bill, global::System.Nullable<decimal> Payment, global::System.Nullable<global::System.DateTime> TDate, string Note, int Original_PaymentID, global::System.Nullable<int> Original_StudID, string Original_FullName, global::System.Nullable<decimal> Original_Bill, global::System.Nullable<decimal> Original_Payment, global::System.Nullable<global::System.DateTime> Original_TDate, int PaymentID) {
+        public virtual int Update(
+                    global::System.Nullable<int> StudID, 
+                    string FullName, 
+                    global::System.Nullable<decimal> Bill, 
+                    global::System.Nullable<decimal> Payment, 
+                    global::System.Nullable<global::System.DateTime> TDate, 
+                    string Note, 
+                    string UserName, 
+                    global::System.Nullable<global::System.DateTime> DOT, 
+                    string EnrollmentType, 
+                    int Original_PaymentID, 
+                    global::System.Nullable<int> Original_StudID, 
+                    string Original_FullName, 
+                    global::System.Nullable<decimal> Original_Bill, 
+                    global::System.Nullable<decimal> Original_Payment, 
+                    global::System.Nullable<global::System.DateTime> Original_TDate, 
+                    string Original_UserName, 
+                    global::System.Nullable<global::System.DateTime> Original_DOT, 
+                    string Original_EnrollmentType, 
+                    int PaymentID) {
             if ((StudID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(StudID.Value));
             }
@@ -7793,48 +8182,90 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Note));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_PaymentID));
-            if ((Original_StudID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_StudID.Value));
+            if ((UserName == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(UserName));
+            }
+            if ((DOT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(DOT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((EnrollmentType == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_FullName == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(EnrollmentType));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_PaymentID));
+            if ((Original_StudID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_StudID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_FullName));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_FullName == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_FullName));
             }
             if ((Original_Bill.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Original_Bill.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_Bill.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_Payment.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_Payment.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(Original_Payment.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             if ((Original_TDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_TDate.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_TDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(PaymentID));
+            if ((Original_UserName == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_UserName));
+            }
+            if ((Original_DOT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_DOT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_EnrollmentType == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_EnrollmentType));
+            }
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(PaymentID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7855,15 +8286,33 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> StudID, string FullName, global::System.Nullable<decimal> Bill, global::System.Nullable<decimal> Payment, global::System.Nullable<global::System.DateTime> TDate, string Note, int Original_PaymentID, global::System.Nullable<int> Original_StudID, string Original_FullName, global::System.Nullable<decimal> Original_Bill, global::System.Nullable<decimal> Original_Payment, global::System.Nullable<global::System.DateTime> Original_TDate) {
-            return this.Update(StudID, FullName, Bill, Payment, TDate, Note, Original_PaymentID, Original_StudID, Original_FullName, Original_Bill, Original_Payment, Original_TDate, Original_PaymentID);
+        public virtual int Update(
+                    global::System.Nullable<int> StudID, 
+                    string FullName, 
+                    global::System.Nullable<decimal> Bill, 
+                    global::System.Nullable<decimal> Payment, 
+                    global::System.Nullable<global::System.DateTime> TDate, 
+                    string Note, 
+                    string UserName, 
+                    global::System.Nullable<global::System.DateTime> DOT, 
+                    string EnrollmentType, 
+                    int Original_PaymentID, 
+                    global::System.Nullable<int> Original_StudID, 
+                    string Original_FullName, 
+                    global::System.Nullable<decimal> Original_Bill, 
+                    global::System.Nullable<decimal> Original_Payment, 
+                    global::System.Nullable<global::System.DateTime> Original_TDate, 
+                    string Original_UserName, 
+                    global::System.Nullable<global::System.DateTime> Original_DOT, 
+                    string Original_EnrollmentType) {
+            return this.Update(StudID, FullName, Bill, Payment, TDate, Note, UserName, DOT, EnrollmentType, Original_PaymentID, Original_StudID, Original_FullName, Original_Bill, Original_Payment, Original_TDate, Original_UserName, Original_DOT, Original_EnrollmentType, Original_PaymentID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(global::System.Nullable<int> StudID, string FullName, global::System.Nullable<decimal> Bill, global::System.Nullable<decimal> Payment, string TDate, string Note) {
+        public virtual int InsertQuery(global::System.Nullable<int> StudID, string FullName, global::System.Nullable<decimal> Bill, global::System.Nullable<decimal> Payment, string TDate, string Note, string user, string dot, string enrollmenttype) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((StudID.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(StudID.Value));
@@ -7900,6 +8349,24 @@ SELECT PaymentID, StudID, FullName, Bill, Payment, TDate, Note FROM Payments WHE
             }
             else {
                 command.Parameters[5].Value = ((string)(Note));
+            }
+            if ((user == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(user));
+            }
+            if ((dot == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(dot));
+            }
+            if ((enrollmenttype == null)) {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[8].Value = ((string)(enrollmenttype));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8541,10 +9008,33 @@ SELECT ProgramID, ProgramName, Duration, Amount FROM Programs WHERE (ProgramID =
             tableMapping.ColumnMappings.Add("Phone1", "Phone1");
             tableMapping.ColumnMappings.Add("Phone2", "Phone2");
             tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("UserName", "UserName");
+            tableMapping.ColumnMappings.Add("DOT", "DOT");
+            tableMapping.ColumnMappings.Add("EnrollmentType", "EnrollmentType");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Students] WHERE (([StudID] = @Original_StudID) AND ((@IsNull_RollNumber = 1 AND [RollNumber] IS NULL) OR ([RollNumber] = @Original_RollNumber)) AND ((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_MiddleName = 1 AND [MiddleName] IS NULL) OR ([MiddleName] = @Original_MiddleName)) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_ProgramName = 1 AND [ProgramName] IS NULL) OR ([ProgramName] = @Original_ProgramName)) AND ((@IsNull_Duration = 1 AND [Duration] IS NULL) OR ([Duration] = @Original_Duration)) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_Active = 1 AND [Active] IS NULL) OR ([Active] = @Original_Active)) AND ((@IsNull_IdenID = 1 AND [IdenID] IS NULL) OR ([IdenID] = @Original_IdenID)) AND ((@IsNull_Phone1 = 1 AND [Phone1] IS NULL) OR ([Phone1] = @Original_Phone1)) AND ((@IsNull_Phone2 = 1 AND [Phone2] IS NULL) OR ([Phone2] = @Original_Phone2)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Students] WHERE (([StudID] = @Original_StudID) AND ((@IsNull_RollNum" +
+                "ber = 1 AND [RollNumber] IS NULL) OR ([RollNumber] = @Original_RollNumber)) AND " +
+                "((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_Fir" +
+                "stName)) AND ((@IsNull_MiddleName = 1 AND [MiddleName] IS NULL) OR ([MiddleName]" +
+                " = @Original_MiddleName)) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([" +
+                "Surname] = @Original_Surname)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL" +
+                ") OR ([FullName] = @Original_FullName)) AND ((@IsNull_ProgramName = 1 AND [Progr" +
+                "amName] IS NULL) OR ([ProgramName] = @Original_ProgramName)) AND ((@IsNull_Durat" +
+                "ion = 1 AND [Duration] IS NULL) OR ([Duration] = @Original_Duration)) AND ((@IsN" +
+                "ull_Amount = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@Is" +
+                "Null_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDat" +
+                "e)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_E" +
+                "ndDate)) AND ((@IsNull_Active = 1 AND [Active] IS NULL) OR ([Active] = @Original" +
+                "_Active)) AND ((@IsNull_IdenID = 1 AND [IdenID] IS NULL) OR ([IdenID] = @Origina" +
+                "l_IdenID)) AND ((@IsNull_Phone1 = 1 AND [Phone1] IS NULL) OR ([Phone1] = @Origin" +
+                "al_Phone1)) AND ((@IsNull_Phone2 = 1 AND [Phone2] IS NULL) OR ([Phone2] = @Origi" +
+                "nal_Phone2)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Origina" +
+                "l_Email)) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @O" +
+                "riginal_UserName)) AND ((@IsNull_DOT = 1 AND [DOT] IS NULL) OR ([DOT] = @Origina" +
+                "l_DOT)) AND ((@IsNull_EnrollmentType = 1 AND [EnrollmentType] IS NULL) OR ([Enro" +
+                "llmentType] = @Original_EnrollmentType)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RollNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8577,10 +9067,16 @@ SELECT ProgramID, ProgramName, Duration, Amount FROM Programs WHERE (ProgramID =
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollmentType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Students] ([RollNumber], [FirstName], [MiddleName], [Surname], [FullName], [ProgramName], [Duration], [Amount], [StartDate], [EndDate], [Note], [Active], [IdenID], [Phone1], [Phone2], [Email]) VALUES (@RollNumber, @FirstName, @MiddleName, @Surname, @FullName, @ProgramName, @Duration, @Amount, @StartDate, @EndDate, @Note, @Active, @IdenID, @Phone1, @Phone2, @Email);
-SELECT StudID, RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName, Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phone2, Email FROM Students WHERE (StudID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Students] ([RollNumber], [FirstName], [MiddleName], [Surname], [FullName], [ProgramName], [Duration], [Amount], [StartDate], [EndDate], [Note], [Active], [IdenID], [Phone1], [Phone2], [Email], [UserName], [DOT], [EnrollmentType]) VALUES (@RollNumber, @FirstName, @MiddleName, @Surname, @FullName, @ProgramName, @Duration, @Amount, @StartDate, @EndDate, @Note, @Active, @IdenID, @Phone1, @Phone2, @Email, @UserName, @DOT, @EnrollmentType);
+SELECT StudID, RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName, Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phone2, Email, UserName, DOT, EnrollmentType FROM Students WHERE (StudID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8598,33 +9094,40 @@ SELECT StudID, RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [Students] SET [RollNumber] = @RollNumber, [FirstName] = @FirstName, [Midd" +
                 "leName] = @MiddleName, [Surname] = @Surname, [FullName] = @FullName, [ProgramNam" +
                 "e] = @ProgramName, [Duration] = @Duration, [Amount] = @Amount, [StartDate] = @St" +
                 "artDate, [EndDate] = @EndDate, [Note] = @Note, [Active] = @Active, [IdenID] = @I" +
-                "denID, [Phone1] = @Phone1, [Phone2] = @Phone2, [Email] = @Email WHERE (([StudID]" +
-                " = @Original_StudID) AND ((@IsNull_RollNumber = 1 AND [RollNumber] IS NULL) OR (" +
-                "[RollNumber] = @Original_RollNumber)) AND ((@IsNull_FirstName = 1 AND [FirstName" +
-                "] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_MiddleName = 1 " +
-                "AND [MiddleName] IS NULL) OR ([MiddleName] = @Original_MiddleName)) AND ((@IsNul" +
-                "l_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@" +
-                "IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)" +
-                ") AND ((@IsNull_ProgramName = 1 AND [ProgramName] IS NULL) OR ([ProgramName] = @" +
-                "Original_ProgramName)) AND ((@IsNull_Duration = 1 AND [Duration] IS NULL) OR ([D" +
-                "uration] = @Original_Duration)) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) O" +
-                "R ([Amount] = @Original_Amount)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS " +
-                "NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [End" +
-                "Date] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_Active = 1 AND " +
-                "[Active] IS NULL) OR ([Active] = @Original_Active)) AND ((@IsNull_IdenID = 1 AND" +
-                " [IdenID] IS NULL) OR ([IdenID] = @Original_IdenID)) AND ((@IsNull_Phone1 = 1 AN" +
-                "D [Phone1] IS NULL) OR ([Phone1] = @Original_Phone1)) AND ((@IsNull_Phone2 = 1 A" +
-                "ND [Phone2] IS NULL) OR ([Phone2] = @Original_Phone2)) AND ((@IsNull_Email = 1 A" +
-                "ND [Email] IS NULL) OR ([Email] = @Original_Email)));\r\nSELECT StudID, RollNumber" +
-                ", FirstName, MiddleName, Surname, FullName, ProgramName, Duration, Amount, Start" +
-                "Date, EndDate, Note, Active, IdenID, Phone1, Phone2, Email FROM Students WHERE (" +
-                "StudID = @StudID)";
+                "denID, [Phone1] = @Phone1, [Phone2] = @Phone2, [Email] = @Email, [UserName] = @U" +
+                "serName, [DOT] = @DOT, [EnrollmentType] = @EnrollmentType WHERE (([StudID] = @Or" +
+                "iginal_StudID) AND ((@IsNull_RollNumber = 1 AND [RollNumber] IS NULL) OR ([RollN" +
+                "umber] = @Original_RollNumber)) AND ((@IsNull_FirstName = 1 AND [FirstName] IS N" +
+                "ULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_MiddleName = 1 AND [M" +
+                "iddleName] IS NULL) OR ([MiddleName] = @Original_MiddleName)) AND ((@IsNull_Surn" +
+                "ame = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull" +
+                "_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND " +
+                "((@IsNull_ProgramName = 1 AND [ProgramName] IS NULL) OR ([ProgramName] = @Origin" +
+                "al_ProgramName)) AND ((@IsNull_Duration = 1 AND [Duration] IS NULL) OR ([Duratio" +
+                "n] = @Original_Duration)) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) OR ([Am" +
+                "ount] = @Original_Amount)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) " +
+                "OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] " +
+                "IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_Active = 1 AND [Activ" +
+                "e] IS NULL) OR ([Active] = @Original_Active)) AND ((@IsNull_IdenID = 1 AND [Iden" +
+                "ID] IS NULL) OR ([IdenID] = @Original_IdenID)) AND ((@IsNull_Phone1 = 1 AND [Pho" +
+                "ne1] IS NULL) OR ([Phone1] = @Original_Phone1)) AND ((@IsNull_Phone2 = 1 AND [Ph" +
+                "one2] IS NULL) OR ([Phone2] = @Original_Phone2)) AND ((@IsNull_Email = 1 AND [Em" +
+                "ail] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_UserName = 1 AND [Us" +
+                "erName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_DOT = 1 AND" +
+                " [DOT] IS NULL) OR ([DOT] = @Original_DOT)) AND ((@IsNull_EnrollmentType = 1 AND" +
+                " [EnrollmentType] IS NULL) OR ([EnrollmentType] = @Original_EnrollmentType)));\r\n" +
+                "SELECT StudID, RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName" +
+                ", Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phone2, Em" +
+                "ail, UserName, DOT, EnrollmentType FROM Students WHERE (StudID = @StudID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8642,6 +9145,9 @@ SELECT StudID, RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RollNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8673,6 +9179,12 @@ SELECT StudID, RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollmentType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8691,13 +9203,13 @@ SELECT StudID, RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        StudID, RollNumber, FirstName, MiddleName, Surname, FullName, Progr" +
                 "amName, Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phon" +
-                "e2, Email\r\nFROM            Students";
+                "e2, Email, UserName, DOT, EnrollmentType\r\nFROM            Students";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = @"INSERT INTO Students
-                         (RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName, Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phone2, Email)
-VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramName,@Duration,@Amount,@StartDate,@EndDate,@Note,@Active,@IdenID,@Phone1,@Phone2,@Email);   
+                         (RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName, Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phone2, Email, UserName, DOT, EnrollmentType)
+VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramName,@Duration,@Amount,@StartDate,@EndDate,@Note,@Active,@IdenID,@Phone1,@Phone2,@Email,@user,@dot,@enrollType);    
 ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RollNumber", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8716,6 +9228,9 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone1", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Phone1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone2", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Phone2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dot", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DOT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@enrollType", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8791,7 +9306,10 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                     global::System.Nullable<int> Original_IdenID, 
                     string Original_Phone1, 
                     string Original_Phone2, 
-                    string Original_Email) {
+                    string Original_Email, 
+                    string Original_UserName, 
+                    global::System.Nullable<global::System.DateTime> Original_DOT, 
+                    string Original_EnrollmentType) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_StudID));
             if ((Original_RollNumber == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -8913,6 +9431,30 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_Email));
             }
+            if ((Original_UserName == null)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_UserName));
+            }
+            if ((Original_DOT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((System.DateTime)(Original_DOT.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((Original_EnrollmentType == null)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_EnrollmentType));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8949,7 +9491,10 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                     global::System.Nullable<int> IdenID, 
                     string Phone1, 
                     string Phone2, 
-                    string Email) {
+                    string Email, 
+                    string UserName, 
+                    global::System.Nullable<global::System.DateTime> DOT, 
+                    string EnrollmentType) {
             if ((RollNumber == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -9046,6 +9591,24 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Email));
             }
+            if ((UserName == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(UserName));
+            }
+            if ((DOT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(DOT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((EnrollmentType == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(EnrollmentType));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9083,6 +9646,9 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                     string Phone1, 
                     string Phone2, 
                     string Email, 
+                    string UserName, 
+                    global::System.Nullable<global::System.DateTime> DOT, 
+                    string EnrollmentType, 
                     int Original_StudID, 
                     string Original_RollNumber, 
                     string Original_FirstName, 
@@ -9099,6 +9665,9 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                     string Original_Phone1, 
                     string Original_Phone2, 
                     string Original_Email, 
+                    string Original_UserName, 
+                    global::System.Nullable<global::System.DateTime> Original_DOT, 
+                    string Original_EnrollmentType, 
                     int StudID) {
             if ((RollNumber == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -9196,128 +9765,170 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Email));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_StudID));
-            if ((Original_RollNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+            if ((UserName == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(UserName));
+            }
+            if ((DOT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(DOT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((EnrollmentType == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_RollNumber));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(EnrollmentType));
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_StudID));
+            if ((Original_RollNumber == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_RollNumber));
             }
             if ((Original_FirstName == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_FirstName));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_FirstName));
             }
             if ((Original_MiddleName == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_MiddleName));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_MiddleName));
             }
             if ((Original_Surname == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Surname));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Surname));
             }
             if ((Original_FullName == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_FullName));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_FullName));
             }
             if ((Original_ProgramName == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_ProgramName));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_ProgramName));
             }
             if ((Original_Duration.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_Duration.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_Duration.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             if ((Original_Amount.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(Original_Amount.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((decimal)(Original_Amount.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             if ((Original_StartDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_StartDate.Value));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(Original_StartDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             if ((Original_EndDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((System.DateTime)(Original_EndDate.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((System.DateTime)(Original_EndDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             if ((Original_Active.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((bool)(Original_Active.Value));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((bool)(Original_Active.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             if ((Original_IdenID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_IdenID.Value));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_IdenID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             if ((Original_Phone1 == null)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_Phone1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_Phone1));
             }
             if ((Original_Phone2 == null)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_Phone2));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_Phone2));
             }
             if ((Original_Email == null)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_Email));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_Email));
             }
-            this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(StudID));
+            if ((Original_UserName == null)) {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_UserName));
+            }
+            if ((Original_DOT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((System.DateTime)(Original_DOT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            if ((Original_EnrollmentType == null)) {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_EnrollmentType));
+            }
+            this.Adapter.UpdateCommand.Parameters[56].Value = ((int)(StudID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9355,6 +9966,9 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                     string Phone1, 
                     string Phone2, 
                     string Email, 
+                    string UserName, 
+                    global::System.Nullable<global::System.DateTime> DOT, 
+                    string EnrollmentType, 
                     int Original_StudID, 
                     string Original_RollNumber, 
                     string Original_FirstName, 
@@ -9370,8 +9984,11 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                     global::System.Nullable<int> Original_IdenID, 
                     string Original_Phone1, 
                     string Original_Phone2, 
-                    string Original_Email) {
-            return this.Update(RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName, Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phone2, Email, Original_StudID, Original_RollNumber, Original_FirstName, Original_MiddleName, Original_Surname, Original_FullName, Original_ProgramName, Original_Duration, Original_Amount, Original_StartDate, Original_EndDate, Original_Active, Original_IdenID, Original_Phone1, Original_Phone2, Original_Email, Original_StudID);
+                    string Original_Email, 
+                    string Original_UserName, 
+                    global::System.Nullable<global::System.DateTime> Original_DOT, 
+                    string Original_EnrollmentType) {
+            return this.Update(RollNumber, FirstName, MiddleName, Surname, FullName, ProgramName, Duration, Amount, StartDate, EndDate, Note, Active, IdenID, Phone1, Phone2, Email, UserName, DOT, EnrollmentType, Original_StudID, Original_RollNumber, Original_FirstName, Original_MiddleName, Original_Surname, Original_FullName, Original_ProgramName, Original_Duration, Original_Amount, Original_StartDate, Original_EndDate, Original_Active, Original_IdenID, Original_Phone1, Original_Phone2, Original_Email, Original_UserName, Original_DOT, Original_EnrollmentType, Original_StudID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9394,7 +10011,10 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
                     global::System.Nullable<int> IdenID, 
                     string Phone1, 
                     string Phone2, 
-                    string Email) {
+                    string Email, 
+                    string user, 
+                    string dot, 
+                    string enrollType) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((RollNumber == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -9491,6 +10111,24 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             }
             else {
                 command.Parameters[15].Value = ((string)(Email));
+            }
+            if ((user == null)) {
+                command.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[16].Value = ((string)(user));
+            }
+            if ((dot == null)) {
+                command.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[17].Value = ((string)(dot));
+            }
+            if ((enrollType == null)) {
+                command.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[18].Value = ((string)(enrollType));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9867,10 +10505,11 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             tableMapping.ColumnMappings.Add("EndDate", "EndDate");
             tableMapping.ColumnMappings.Add("Note", "Note");
             tableMapping.ColumnMappings.Add("StudID", "StudID");
+            tableMapping.ColumnMappings.Add("EnrollmentType", "EnrollmentType");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Students] WHERE (((@IsNull_RollNumber = 1 AND [RollNumber] IS NULL) OR ([RollNumber] = @Original_RollNumber)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_ProgramName = 1 AND [ProgramName] IS NULL) OR ([ProgramName] = @Original_ProgramName)) AND ((@IsNull_Duration = 1 AND [Duration] IS NULL) OR ([Duration] = @Original_Duration)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ([StudID] = @Original_StudID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Students] WHERE (((@IsNull_RollNumber = 1 AND [RollNumber] IS NULL) OR ([RollNumber] = @Original_RollNumber)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_ProgramName = 1 AND [ProgramName] IS NULL) OR ([ProgramName] = @Original_ProgramName)) AND ((@IsNull_Duration = 1 AND [Duration] IS NULL) OR ([Duration] = @Original_Duration)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ([StudID] = @Original_StudID) AND ((@IsNull_EnrollmentType = 1 AND [EnrollmentType] IS NULL) OR ([EnrollmentType] = @Original_EnrollmentType)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RollNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -9885,11 +10524,13 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EndDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollmentType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Students] ([RollNumber], [FullName], [ProgramName], [Duration], [Sta" +
-                "rtDate], [EndDate], [Note]) VALUES (@RollNumber, @FullName, @ProgramName, @Durat" +
-                "ion, @StartDate, @EndDate, @Note)";
+                "rtDate], [EndDate], [Note], [EnrollmentType]) VALUES (@RollNumber, @FullName, @P" +
+                "rogramName, @Duration, @StartDate, @EndDate, @Note, @EnrollmentType)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9898,9 +10539,10 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Students] SET [RollNumber] = @RollNumber, [FullName] = @FullName, [ProgramName] = @ProgramName, [Duration] = @Duration, [StartDate] = @StartDate, [EndDate] = @EndDate, [Note] = @Note WHERE (((@IsNull_RollNumber = 1 AND [RollNumber] IS NULL) OR ([RollNumber] = @Original_RollNumber)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_ProgramName = 1 AND [ProgramName] IS NULL) OR ([ProgramName] = @Original_ProgramName)) AND ((@IsNull_Duration = 1 AND [Duration] IS NULL) OR ([Duration] = @Original_Duration)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ([StudID] = @Original_StudID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Students] SET [RollNumber] = @RollNumber, [FullName] = @FullName, [ProgramName] = @ProgramName, [Duration] = @Duration, [StartDate] = @StartDate, [EndDate] = @EndDate, [Note] = @Note, [EnrollmentType] = @EnrollmentType WHERE (((@IsNull_RollNumber = 1 AND [RollNumber] IS NULL) OR ([RollNumber] = @Original_RollNumber)) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_ProgramName = 1 AND [ProgramName] IS NULL) OR ([ProgramName] = @Original_ProgramName)) AND ((@IsNull_Duration = 1 AND [Duration] IS NULL) OR ([Duration] = @Original_Duration)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ([StudID] = @Original_StudID) AND ((@IsNull_EnrollmentType = 1 AND [EnrollmentType] IS NULL) OR ([EnrollmentType] = @Original_EnrollmentType)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9909,6 +10551,7 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RollNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FullName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -9922,6 +10565,8 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EndDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollmentType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollmentType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9937,7 +10582,7 @@ VALUES        (@RollNumber,@FirstName,@MiddleName,@Surname,@FullName,@ProgramNam
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        RollNumber, FullName, ProgramName, Duration, StartDate, EndDate, Note, StudID
+            this._commandCollection[0].CommandText = @"SELECT        RollNumber, FullName, ProgramName, Duration, StartDate, EndDate, Note, StudID, EnrollmentType
 FROM            Students
 WHERE        (FirstName = @first) OR
                          (MiddleName = @middle) OR
@@ -9950,8 +10595,8 @@ WHERE        (FirstName = @first) OR
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ProgramName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        RollNumber, FullName, ProgramName, Duration, StartDate, EndDate, No" +
-                "te, StudID\r\nFROM            Students";
+            this._commandCollection[1].CommandText = "SELECT Duration, EndDate, EnrollmentType, FullName, Note, ProgramName, RollNumber" +
+                ", StartDate, StudID FROM Students";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10084,7 +10729,7 @@ WHERE        (FirstName = @first) OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_RollNumber, string Original_FullName, string Original_ProgramName, global::System.Nullable<int> Original_Duration, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<global::System.DateTime> Original_EndDate, int Original_StudID) {
+        public virtual int Delete(string Original_RollNumber, string Original_FullName, string Original_ProgramName, global::System.Nullable<int> Original_Duration, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<global::System.DateTime> Original_EndDate, int Original_StudID, string Original_EnrollmentType) {
             if ((Original_RollNumber == null)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -10134,6 +10779,14 @@ WHERE        (FirstName = @first) OR
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_StudID));
+            if ((Original_EnrollmentType == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_EnrollmentType));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10154,7 +10807,7 @@ WHERE        (FirstName = @first) OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string RollNumber, string FullName, string ProgramName, global::System.Nullable<int> Duration, global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string Note) {
+        public virtual int Insert(string RollNumber, string FullName, string ProgramName, global::System.Nullable<int> Duration, global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string Note, string EnrollmentType) {
             if ((RollNumber == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10197,6 +10850,12 @@ WHERE        (FirstName = @first) OR
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Note));
             }
+            if ((EnrollmentType == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(EnrollmentType));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10217,7 +10876,23 @@ WHERE        (FirstName = @first) OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string RollNumber, string FullName, string ProgramName, global::System.Nullable<int> Duration, global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string Note, string Original_RollNumber, string Original_FullName, string Original_ProgramName, global::System.Nullable<int> Original_Duration, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<global::System.DateTime> Original_EndDate, int Original_StudID) {
+        public virtual int Update(
+                    string RollNumber, 
+                    string FullName, 
+                    string ProgramName, 
+                    global::System.Nullable<int> Duration, 
+                    global::System.Nullable<global::System.DateTime> StartDate, 
+                    global::System.Nullable<global::System.DateTime> EndDate, 
+                    string Note, 
+                    string EnrollmentType, 
+                    string Original_RollNumber, 
+                    string Original_FullName, 
+                    string Original_ProgramName, 
+                    global::System.Nullable<int> Original_Duration, 
+                    global::System.Nullable<global::System.DateTime> Original_StartDate, 
+                    global::System.Nullable<global::System.DateTime> Original_EndDate, 
+                    int Original_StudID, 
+                    string Original_EnrollmentType) {
             if ((RollNumber == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10260,55 +10935,69 @@ WHERE        (FirstName = @first) OR
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Note));
             }
-            if ((Original_RollNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((EnrollmentType == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_RollNumber));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(EnrollmentType));
+            }
+            if ((Original_RollNumber == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_RollNumber));
             }
             if ((Original_FullName == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_FullName));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_FullName));
             }
             if ((Original_ProgramName == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_ProgramName));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ProgramName));
             }
             if ((Original_Duration.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_Duration.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Duration.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_StartDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_StartDate.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_StartDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             if ((Original_EndDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_EndDate.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_EndDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_StudID));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_StudID));
+            if ((Original_EnrollmentType == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_EnrollmentType));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

@@ -12,6 +12,7 @@ namespace AptechPay
 {
     public partial class Search : Form
     {
+        public string username;
         public Search()
         {
             InitializeComponent();
@@ -43,9 +44,12 @@ namespace AptechPay
             {
                 string iden = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
                 string fulname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                string enrollType = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
                 Payment payment = new Payment();
+                payment.userName = username;
                 payment.studid = iden;
                 payment.fulname = fulname;
+                payment.enroltype = enrollType;
                 payment.ShowDialog();
             }
             else

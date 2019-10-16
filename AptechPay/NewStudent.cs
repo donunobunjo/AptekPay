@@ -13,6 +13,7 @@ namespace AptechPay
 {
     public partial class NewStudent : Form
     {
+        Int32 ctr;
         public string userName;
         public NewStudent()
         {
@@ -21,7 +22,7 @@ namespace AptechPay
 
         private void NewStudent_Load(object sender, EventArgs e)
         {
-            Int32 ctr;
+            
             DataTable dt = new DataTable();
             DataTable stddt = new DataTable();
             stddt = this.studentsTableAdapter.GetData();
@@ -179,14 +180,15 @@ namespace AptechPay
                     return;
                 }
             }
+            DateTime today = DateTime.Today;
             string fullname = textBox2.Text + " " + textBox3.Text + " " + textBox4.Text;
             enddate= dateTimePicker1.Value.Date.AddMonths(Convert.ToInt32(textBox5.Text));
             // this.studentsTableAdapter.InsertQuery(rollnum, textBox2.Text, textBox3.Text, textBox4.Text, fullname, comboBox1.Text, Convert.ToInt32(textBox5.Text), Convert.ToDecimal(textBox6.Text), dateTimePicker1.Value, enddate, textBox8.Text, true);
-            this.studentsTableAdapter.InsertQuery(rollnum, textBox2.Text, textBox3.Text, textBox4.Text, fullname, comboBox1.Text, Convert.ToInt32(textBox5.Text), Convert.ToDecimal(textBox6.Text), dateTimePicker1.Value.ToString(), enddate.ToString(), textBox8.Text, true,Convert.ToInt32(textBox12.Text),textBox9.Text,alternativePhoneNumber,email);
+            this.studentsTableAdapter.InsertQuery(rollnum, textBox2.Text, textBox3.Text, textBox4.Text, fullname, comboBox1.Text, Convert.ToInt32(textBox5.Text), Convert.ToDecimal(textBox6.Text), dateTimePicker1.Value.ToString(), enddate.ToString(), textBox8.Text, true,Convert.ToInt32(textBox12.Text),textBox9.Text,alternativePhoneNumber,email,userName,dateTimePicker1.Value.ToString(),comboBox2.Text);
             DataTable dtable = new DataTable();
             dtable=this.studIDTableAdapter.GetData();
             Int32 stdid = Convert.ToInt32(dtable.Rows[0][0].ToString());
-            this.paymentsTableAdapter.InsertQuery(stdid, fullname, Convert.ToDecimal(textBox6.Text), Convert.ToDecimal(textBox7.Text), dateTimePicker1.Value.Date.ToString(), textBox8.Text);
+            this.paymentsTableAdapter.InsertQuery(stdid, fullname, Convert.ToDecimal(textBox6.Text), Convert.ToDecimal(textBox7.Text), dateTimePicker1.Value.Date.ToString(), textBox8.Text,userName,today.ToString(),comboBox2.Text);
             //MessageBox.Show(Convert.ToString(stdid));
             MessageBox.Show("Student's Information has been registered");
             textBox1.Text = "";
@@ -203,9 +205,6 @@ namespace AptechPay
             textBox12.Text = "";
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
-            DataTable dtCheckStudID = new DataTable();
-            dtCheckStudID = this.checkstudentIDTableAdapter.GetData();
-            Int32 ctr = Convert.ToInt32(dt.Rows[0][0].ToString());
             ctr = ctr + 1;
             textBox12.Text = ctr.ToString();
             textBox1.Focus();

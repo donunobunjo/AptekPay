@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AptechPay.exe" size="360960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AptechPay.exe" size="377856">
       <assemblyIdentity name="AptechPay" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sa92zMCP0Hizri8RxpT/9cd4ZsnWLxeBkrCYQSSrt9E=</dsig:DigestValue>
+        <dsig:DigestValue>Yt0UM9b+mH+lOLLHQ5fnqu6joWnRGFfbm6oE+H9Fk84=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

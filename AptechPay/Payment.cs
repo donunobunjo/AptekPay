@@ -14,6 +14,8 @@ namespace AptechPay
     {
         public string studid;
         public string fulname;
+        public string userName;
+        public string enroltype;
         public Payment()
         {
             InitializeComponent();
@@ -46,8 +48,15 @@ namespace AptechPay
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.paymentsTableAdapter.InsertQuery(Convert.ToInt32(studid.Trim()), fulname.Trim(), 0, Convert.ToDecimal(textBox1.Text), dateTimePicker1.Value.Date.ToString(), textBox2.Text);
-            MessageBox.Show("The payment has been made, thankyou");
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("You need to enter the amount");
+                textBox1.Focus();
+                return;
+            }
+            DateTime today = DateTime.Today;
+            this.paymentsTableAdapter.InsertQuery(Convert.ToInt32(studid.Trim()), fulname.Trim(), 0, Convert.ToDecimal(textBox1.Text), dateTimePicker1.Value.Date.ToString(), textBox2.Text,userName,today.ToString(),enroltype);
+            MessageBox.Show("The payment has been made, thank you");
             this.Close();
         }
 
