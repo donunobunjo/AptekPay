@@ -14,6 +14,7 @@ namespace AptechPay
     {
         //private int childFormNumber = 0;
         public string userName;
+        public string role;
 
         public MDI()
         {
@@ -27,6 +28,9 @@ namespace AptechPay
             this.Height = Screen.PrimaryScreen.WorkingArea.Height;
             this.Width = Screen.PrimaryScreen.WorkingArea.Width;
             this.CenterToScreen();
+            if (role == "Admin") {
+                toolStripMenuItem2.Visible = true;
+            }
         }
 
         private void registerProgramToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,6 +104,36 @@ namespace AptechPay
         private void MDI_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void addUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (role != "Admin")
+            {
+                MessageBox.Show("You are not authorized to add a user");
+                return;
+            }
+            else {
+                //MessageBox.Show("You gat the right");
+                NewUser newuser = new NewUser();
+                newuser.MdiParent = this;
+                newuser.Show();
+            }
+        }
+
+        private void removeUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (role != "Admin")
+            {
+                MessageBox.Show("You are not authorized to remove a user");
+                return;
+            }
+            else
+            {
+                RemoveUser removeUser = new RemoveUser();
+                removeUser.MdiParent = this;
+                removeUser.Show();
+            }
         }
     }
 }

@@ -40,7 +40,7 @@ namespace AptechPay
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = this.usersTableAdapter.GetDataBy(textBox1.Text.Trim(), textBox2.Text.Trim());
+            dt = this.usersTableAdapter.GetDataBy(textBox1.Text, textBox2.Text);
             if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("Invalid username or password");
@@ -48,7 +48,9 @@ namespace AptechPay
             }
             else {
                 string userName = textBox1.Text.Trim();
+                string role = dt.Rows[0][2].ToString();
                 MDI mdi = new MDI();
+                mdi.role = role;
                 mdi.userName = userName;
                 mdi.Show();
                 this.Hide();

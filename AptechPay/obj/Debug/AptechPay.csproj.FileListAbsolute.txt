@@ -30,3 +30,6 @@ C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.exe.manife
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.application
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.Login.resources
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.ChangePassword.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.csprojResolveAssemblyReference.cache
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.NewUser.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.RemoveUser.resources
