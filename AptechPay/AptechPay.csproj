@@ -67,8 +67,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -138,6 +141,12 @@
     <Compile Include="paymentsPerPeriod.Designer.cs">
       <DependentUpon>paymentsPerPeriod.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentsPerPeriod1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentsPerPeriod1.Designer.cs">
+      <DependentUpon>PaymentsPerPeriod1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveUser.cs">
@@ -176,8 +185,12 @@
     <EmbeddedResource Include="PaymentHistory.resx">
       <DependentUpon>PaymentHistory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentPerPeriod.rdlc" />
     <EmbeddedResource Include="paymentsPerPeriod.resx">
       <DependentUpon>paymentsPerPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsPerPeriod1.resx">
+      <DependentUpon>PaymentsPerPeriod1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

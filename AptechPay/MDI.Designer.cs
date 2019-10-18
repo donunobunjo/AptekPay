@@ -127,14 +127,14 @@
             // perPeriodToolStripMenuItem
             // 
             this.perPeriodToolStripMenuItem.Name = "perPeriodToolStripMenuItem";
-            this.perPeriodToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.perPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.perPeriodToolStripMenuItem.Text = "Per Period";
             this.perPeriodToolStripMenuItem.Click += new System.EventHandler(this.perPeriodToolStripMenuItem_Click);
             // 
             // perProgramToolStripMenuItem
             // 
             this.perProgramToolStripMenuItem.Name = "perProgramToolStripMenuItem";
-            this.perProgramToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.perProgramToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.perProgramToolStripMenuItem.Text = "Per Program";
             // 
             // enrollmentsPerPeriodToolStripMenuItem
@@ -145,17 +145,18 @@
             this.enrollmentsPerPeriodToolStripMenuItem.Name = "enrollmentsPerPeriodToolStripMenuItem";
             this.enrollmentsPerPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.enrollmentsPerPeriodToolStripMenuItem.Text = "Enrollments";
+            this.enrollmentsPerPeriodToolStripMenuItem.Click += new System.EventHandler(this.enrollmentsPerPeriodToolStripMenuItem_Click);
             // 
             // perPeriodToolStripMenuItem1
             // 
             this.perPeriodToolStripMenuItem1.Name = "perPeriodToolStripMenuItem1";
-            this.perPeriodToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.perPeriodToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.perPeriodToolStripMenuItem1.Text = "Per Period";
             // 
             // perProgramToolStripMenuItem1
             // 
             this.perProgramToolStripMenuItem1.Name = "perProgramToolStripMenuItem1";
-            this.perProgramToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.perProgramToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.perProgramToolStripMenuItem1.Text = "Per Program";
             // 
             // helpToolStripMenuItem
@@ -243,14 +244,14 @@
             // addUsersToolStripMenuItem
             // 
             this.addUsersToolStripMenuItem.Name = "addUsersToolStripMenuItem";
-            this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.addUsersToolStripMenuItem.Text = "Add User";
             this.addUsersToolStripMenuItem.Click += new System.EventHandler(this.addUsersToolStripMenuItem_Click);
             // 
             // removeUsersToolStripMenuItem
             // 
             this.removeUsersToolStripMenuItem.Name = "removeUsersToolStripMenuItem";
-            this.removeUsersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeUsersToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.removeUsersToolStripMenuItem.Text = "Remove User";
             this.removeUsersToolStripMenuItem.Click += new System.EventHandler(this.removeUsersToolStripMenuItem_Click);
             // 

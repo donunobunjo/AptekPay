@@ -33,3 +33,6 @@ C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.ChangePass
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.csprojResolveAssemblyReference.cache
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.NewUser.resources
 C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.RemoveUser.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\AptechPay.PaymentsPerPeriod1.resources
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\RdlCompile.cache
+C:\Users\Don\Desktop\AptekPay\AptechPay\AptechPay\obj\Debug\RdlCompile.compiled
